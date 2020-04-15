@@ -92,12 +92,41 @@
   width: 350px;
   height: 100vh;
   /* This give the height 100% of the screen or, '100% of View Height' */
-  background-color: #81C784;
+  animation: pulse 5s linear infinite alternate;
+  /*
+  animation-name: stretch;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  */
+  /*
+  //@keyframes pulse {
+    0% {
+      background: #001f4f;
+    }
+    100% {
+      background-color: #FF4136;
+    }
+  }
+  */
   border: 1px solid #004D40;
   border-left: none;
   border-bottom: none;
   z-index: 2;
   /* This set the layer level of the element, it has precendence over initial level of 1*/
+}
+@keyframes pulse {
+  0%,
+  100% {
+    background-color: green;
+  }
+  50% {
+    background-color: yellowgreen;
+  }
 }
 .menu ul li {
   list-style-type: none;
